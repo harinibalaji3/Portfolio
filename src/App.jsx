@@ -3,7 +3,7 @@ import animeGirl from "./assets/anime.png";
 import { FaUserGraduate, FaCode, FaBrain, FaLightbulb, FaUser, FaStar, FaLaptopCode, FaLinkedin, FaGithub, FaEnvelope, FaCss3Alt } from 'react-icons/fa';
 import { SiReact, SiNodedotjs, SiExpress, SiMysql, SiOpenjdk, SiHtml5, SiJavascript } from 'react-icons/si';
 import seafoodImage from "./assets/Seafood.png";
-import weatherImage from "./assets/weathermap.png";
+import weatherImage from "./assets/Weathermap.png";
 import libraryImage from "./assets/Library.png";
 import gamehubImage from "./assets/Gamehub.png";
 import emailjs from '@emailjs/browser';
