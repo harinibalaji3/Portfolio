@@ -14,10 +14,9 @@ export default function Portfolio() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [statusMessage, setStatusMessage] = useState('');
 
-  // 👇 REPLACE THESE WITH YOUR ACTUAL IDs FROM EMAILJS DASHBOARD
-  const SERVICE_ID = 'service_50x3lk9';      // e.g., 'service_abc123'
-  const TEMPLATE_ID = 'template_xnlmlfq';    // e.g., 'template_xyz789'
-  const PUBLIC_KEY = 'UePjE-TUI9kZOo6JT';      // e.g., 'user_abc123xyz'
+  const SERVICE_ID = 'service_50x3lk9';      
+  const TEMPLATE_ID = 'template_xnlmlfq';    
+  const PUBLIC_KEY = 'UePjE-TUI9kZOo6JT';     
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -78,7 +77,7 @@ export default function Portfolio() {
     {
       title: "GameHub",
       description: "A collection of two popular classic games - Tic-Tac-Toe and Snake - developed using Java with Swing GUI.",
-      tech: "Java, Swing GUI, AWT",
+      tech: "Java, Swing GUI",
       github: "https://github.com/harinibalaji3/Gamehub",
     },
   ];
@@ -132,7 +131,7 @@ export default function Portfolio() {
         <div className="flex-1 space-y-3">
           <h1 className="text-4xl md:text-4xl font-extrabold leading-tight text-[#1f2454]">
             <span className="text-2xl text-gray-500 tracking-wide"> Hello, I'm</span><br/>
-            Harini <br />
+            Harini Balaji<br />
           </h1>
 
           <h2 className="text-3xl md:text-4xl font-light text-orange-400">
@@ -255,6 +254,9 @@ export default function Portfolio() {
                   <div className="flex items-center gap-3 text-gray-600">
                     <span><span className="font-semibold">Location:</span> Ramanathapuram</span>
                   </div>
+                  <div className="flex items-center gap-3 text-gray-600">
+                    <span><span className="font-semibold">Preferred Location:</span> Chennai || Coimbatore || Madurai || Bangalore</span>
+                  </div>
                 </div>
               </div>
 
@@ -265,7 +267,7 @@ export default function Portfolio() {
                 </h4>
                 <div className="space-y-2">
                   <p className="font-semibold text-gray-800">BE Computer Science Engineering</p>
-                  <p className="text-orange-400 font-medium">Expected 2026</p>
+                  <p className=" text-gray-800 font-medium">May 2026</p>
                 </div>
               </div>
 
@@ -376,7 +378,7 @@ export default function Portfolio() {
                   <span className="bg-[#fff8f6] px-2 py-1 rounded-lg text-xs font-medium text-gray-700 hover:bg-orange-100 hover:text-orange-600 transition">REST APIs</span>
                   <span className="bg-[#fff8f6] px-2 py-1 rounded-lg text-xs font-medium text-gray-700 hover:bg-orange-100 hover:text-orange-600 transition">CRUD</span>
                   <span className="bg-[#fff8f6] px-2 py-1 rounded-lg text-xs font-medium text-gray-700 hover:bg-orange-100 hover:text-orange-600 transition">OOP</span>
-                  <span className="bg-[#fff8f6] px-2 py-1 rounded-lg text-xs font-medium text-gray-700 hover:bg-orange-100 hover:text-orange-600 transition">DSA</span>
+                  <span className="bg-[#fff8f6] px-2 py-1 rounded-lg text-xs font-medium text-gray-700 hover:bg-orange-100 hover:text-orange-600 transition">Basic DSA</span>
                 </div>
               </div>
             </div>
@@ -432,7 +434,8 @@ export default function Portfolio() {
       <section id="projects" className="min-h-screen px-8 py-20 bg-white">
         <div className="text-center mb-20">
           <p className="text-orange-400 font-semibold uppercase">My Work</p>
-          <h2 className="text-6xl font-extrabold mt-4 text-[#1f2454]">PROJECTS</h2>
+          <h2 className="text-5xl font-extrabold mt-4 text-[#1f2454]">PROJECTS</h2>
+<div className="w-24 h-1 bg-orange-400 mx-auto mt-4"></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -441,18 +444,18 @@ export default function Portfolio() {
               key={index}
               className="bg-[#fdf5f3] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 flex flex-col"
             >
-              <div className="h-48 bg-gradient-to-br from-[#1f2454] to-[#2d3470] flex items-center justify-center overflow-hidden">
-                {project.title === "GameHub" && (
-                  <img src={gamehubImage} alt="GameHub" className="w-full h-full object-cover object-top"/>
+<div className="h-48  bg-gradient-to-br from-[#fde2e4] to-[#fad2e1] flex items-center justify-center p-2 overflow-hidden">
+                  {project.title === "GameHub" && (
+                  <img src={gamehubImage} alt="GameHub" className="w-full h-full object-contain object-top"/>
                 )}
                 {project.title === "Global Seafood Supply Chain Management System" && (
-                  <img src={seafoodImage} alt="Seafood SCM" className="w-full h-full object-cover" />
+                  <img src={seafoodImage} alt="Seafood SCM" className="w-full h-full object-contain" />
                 )}
                 {project.title === "Weather Forecasting Website" && (
-                  <img src={weatherImage} alt="Weather App" className="w-full h-full object-cover" />
+                  <img src={weatherImage} alt="Weather App" className="w-full h-full object-contain" />
                 )}
                 {project.title === "Library Management System" && (
-                  <img src={libraryImage} alt="Library System" className="w-full h-full object-cover" />
+                  <img src={libraryImage} alt="Library System" className="w-full h-full object-contain" />
                 )}
               </div>
 
@@ -664,7 +667,7 @@ export default function Portfolio() {
 
       {/* Footer */}
       <footer className="text-center py-8 text-gray-500 bg-white">
-        © 2026 Harini Portfolio. Built with React & Tailwind CSS.
+        © 2026 Harini Portfolio. 
       </footer>
     </div>
   );
