@@ -87,7 +87,7 @@ export default function Portfolio() {
       
       {/* Navbar */}
       <nav className="fixed top-0 w-full bg-[#fdf5f3]/90 backdrop-blur-md z-50 shadow-sm">
-        <div className="max-w-9xl mx-auto flex justify-between items-center px-8 py-6">
+        <div className="max-w-9xl mx-auto flex justify-between items-center px-6 py-4">
           <h1 className="text-3xl font-extrabold tracking-wide">
             PORTFOLIO
           </h1>
@@ -128,7 +128,7 @@ export default function Portfolio() {
         className="min-h-screen bg-[#fdf5f3] flex flex-col md:flex-row items-center justify-center px-8 lg:px-15 pt-5 overflow-hidden"
       >
         {/* Left Side */}
-        <div className="flex-1 space-y-3">
+        <div className="flex-1 space-y-2">
           <h1 className="text-4xl md:text-4xl font-extrabold leading-tight text-[#1f2454]">
             <span className="text-2xl text-gray-500 tracking-wide"> Hello, I'm</span><br/>
             Harini Balaji<br />
