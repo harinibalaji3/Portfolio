@@ -6,6 +6,9 @@ import seafoodImage from "./assets/Seafood.png";
 import weatherImage from "./assets/Weathermap.png";
 import libraryImage from "./assets/Library.png";
 import gamehubImage from "./assets/Gamehub.png";
+import bakeryImage from "./assets/bakeryImage.png";
+import cameraImage from "./assets/cameraImage.png";
+import foldFreshImage from "./assets/foldFreshImage.png"
 import emailjs from '@emailjs/browser';
 
 export default function Portfolio() {
@@ -65,7 +68,9 @@ export default function Portfolio() {
       description:
         "Responsive weather forecasting app with real-time weather updates using OpenWeather API.",
       tech: "React.js, OpenWeatherMap API, CSS",
+       liveDemo:"https://transcendent-belekoy-a9ba2c.netlify.app/",
       github: "https://github.com/harinibalaji3/weatherapp",
+      
     },
     {
       title: "Library Management System",
@@ -80,6 +85,27 @@ export default function Portfolio() {
       tech: "Java, Swing GUI",
       github: "https://github.com/harinibalaji3/Gamehub",
     },
+    {
+  title: "Halide Camera Store",
+  description: "A vintage camera and film photography e-commerce website where enthusiasts can explore restored cameras, lenses, film stocks, and darkroom supplies, view detailed product specifications, and submit equipment for trade-in appraisal.",
+  tech: "HTML, CSS, JavaScript",
+  liveDemo: "https://harinibalaji3.github.io/halide-camera-store/",
+  github: "https://github.com/harinibalaji3/halide-camera-store",
+},
+{
+  title: "Bakery Website",
+  description: "A visually appealing bakery and cake ordering website where customers can explore pastries, customize cakes, upload design inspirations, choose flavors and sizes, schedule pickup or delivery, manage subscriptions, and track their orders.",
+  tech: "HTML, CSS, JavaScript",
+  liveDemo: "https://harinibalaji3.github.io/bakery/",
+  github: "https://github.com/harinibalaji3/bakery",
+},
+{
+  title: "Fold & Fresh",
+  description: "A convenient laundry and dry-cleaning website that offers doorstep pickup and delivery, multiple garment-care services, transparent pricing, flexible scheduling, and real-time order tracking.",
+  tech: "HTML, CSS, JavaScript",
+  liveDemo: "https://harinibalaji3.github.io/fold-and-fresh/",
+  github: "https://github.com/harinibalaji3/fold-and-fresh",
+},
   ];
 
   return (
@@ -444,47 +470,120 @@ export default function Portfolio() {
               key={index}
               className="bg-[#fdf5f3] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 flex flex-col"
             >
-<div className="h-48  bg-gradient-to-br from-[#fde2e4] to-[#fad2e1] flex items-center justify-center p-2 overflow-hidden">
-                  {project.title === "GameHub" && (
-                  <img src={gamehubImage} alt="GameHub" className="w-full h-full object-contain object-top"/>
-                )}
-                {project.title === "Global Seafood Supply Chain Management System" && (
-                  <img src={seafoodImage} alt="Seafood SCM" className="w-full h-full object-contain" />
-                )}
-                {project.title === "Weather Forecasting Website" && (
-                  <img src={weatherImage} alt="Weather App" className="w-full h-full object-contain" />
-                )}
-                {project.title === "Library Management System" && (
-                  <img src={libraryImage} alt="Library System" className="w-full h-full object-contain" />
-                )}
-              </div>
+           <div className="h-48 bg-gradient-to-br from-[#fde2e4] to-[#fad2e1] flex items-center justify-center p-2 overflow-hidden">
 
-              <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-xl font-bold mb-3 text-[#1f2454]">{project.title}</h3>
-                
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  {project.description}
-                </p>
-                
-                {project.tech && (
-                  <div className="flex flex-wrap gap-2 mb-4 mt-auto">
-                    {project.tech.split(', ').map((tech, idx) => (
-                      <span key={idx} className="bg-white px-2 py-1 rounded-lg text-xs font-medium text-gray-600 shadow-sm">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                )}
+  {project.title === "GameHub" && (
+    <img
+      src={gamehubImage}
+      alt="GameHub"
+      className="w-full h-full object-contain object-top"
+    />
+  )}
 
-                <a 
-                  href={project.github} 
-                  target="_blank" 
-                  rel="noreferrer" 
-                  className="text-orange-400 text-sm font-semibold hover:text-orange-500 transition inline-flex items-center gap-2 w-fit"
-                >
-                  View on GitHub <span>→</span>
-                </a>
-              </div>
+  {project.title === "Global Seafood Supply Chain Management System" && (
+    <img
+      src={seafoodImage}
+      alt="Seafood SCM"
+      className="w-full h-full object-contain"
+    />
+  )}
+
+  {project.title === "Weather Forecasting Website" && (
+    <img
+      src={weatherImage}
+      alt="Weather App"
+      className="w-full h-full object-contain"
+    />
+  )}
+
+  {project.title === "Library Management System" && (
+    <img
+      src={libraryImage}
+      alt="Library System"
+      className="w-full h-full object-contain"
+    />
+  )}
+
+  {project.title === "Halide Camera Store" && (
+    <img
+      src={cameraImage}
+      alt="Halide Camera Store"
+      className="w-full h-full object-contain"
+    />
+  )}
+
+  {project.title === "Bakery Website" && (
+    <img
+      src={bakeryImage}
+      alt="Bakery Website"
+      className="w-full h-full object-contain"
+    />
+  )}
+
+  {project.title === "Fold & Fresh" && (
+    <img
+      src={foldFreshImage}
+      alt="Fold & Fresh"
+      className="w-full h-full object-contain"
+    />
+  )}
+
+</div>
+<div className="p-6 flex-1 flex flex-col">
+
+  {/* Project Title */}
+  <h3 className="text-xl font-bold mb-3 text-[#1f2454]">
+    {project.title}
+  </h3>
+
+  {/* Project Description */}
+  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+    {project.description}
+  </p>
+
+  {/* Tech Stack */}
+  {project.tech && (
+    <div className="flex flex-wrap gap-2 mb-4 mt-auto">
+      {project.tech.split(', ').map((tech, idx) => (
+        <span
+          key={idx}
+          className="bg-white px-2 py-1 rounded-lg text-xs font-medium text-gray-600 shadow-sm"
+        >
+          {tech}
+        </span>
+      ))}
+    </div>
+  )}
+
+  {/* Live Demo and GitHub Links */}
+  <div className="flex items-center gap-5 mt-auto">
+
+    {project.liveDemo && (
+      <a
+        href={project.liveDemo}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-orange-400 text-sm font-semibold hover:text-orange-500 transition inline-flex items-center gap-2 w-fit"
+      >
+        Live Demo <span>→</span>
+      </a>
+    )}
+
+    {project.github && (
+      <a
+        href={project.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[#1f2454] text-sm font-semibold hover:text-orange-500 transition inline-flex items-center gap-2 w-fit"
+      >
+        View Source <span>→</span>
+      </a>
+    )}
+
+  </div>
+
+</div>
+             
             </div>
           ))}
         </div>
